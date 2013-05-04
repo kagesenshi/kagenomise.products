@@ -6,4 +6,14 @@
 
     <!-- -*- extra stuff goes here -*- -->
 
+    <plone:behavior
+        title="SimpleCartItem"
+        description="Allow content to be added into SimpleCart"
+        provides=".simplecartitem.ISimpleCartItem"
+        factory=".simplecartitem.SimpleCartItem"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        marker=".simplecartitem.ISimpleCartItem"
+        />
+
+
 </configure>
