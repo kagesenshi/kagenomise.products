@@ -33,6 +33,7 @@ setup(name='kagenomise.products',
           'collective.dexteritytextindexer',
           'plone.app.multilingual',
           'plone.multilingualbehavior',
+          'collective.js.simplecart',
           # -*- Extra requirements: -*-
       ],
       extras_require={
