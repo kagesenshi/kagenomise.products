@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<layers>
+    <layer name="kagenomise.products"
+        interface="kagenomise.products.interfaces.IProductSpecific" />
+</layers>
