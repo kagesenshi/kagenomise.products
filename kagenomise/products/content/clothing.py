@@ -19,14 +19,40 @@ from z3c.relationfield.schema import RelationList, RelationChoice
 from plone.formwidget.contenttree import ObjPathSourceBinder
 
 from kagenomise.products import MessageFactory as _
+from kagenomise.products.interfaces import IBaseProduct
 
 
 # Interface class; used to define content-type schema.
 
-class IClothing(form.Schema, IImageScaleTraversable):
+class IClothing(form.Schema, IImageScaleTraversable, IBaseProduct):
     """
     Description of the Example Type
     """
-    pass
 
+    available_colors = schema.List(
+        title=u'Available Colors',
+        description=u'Available color codes (eg: #ffffff, #000000), one each line',
+        value_type=schema.TextLine(),
+    )
+
+    available_sizes = schema.List(
+        title=u'Available Sizes',
+        description=u'Available sizes for clothing',
+        value_type=schema.TextLine()
+    )
+
+    currency = schema.Choice(
+        title=u'Currency',
+        vocabulary='kagenomise.products.currency'
+    )
+
+    price = schema.Int(
+        title=u'Price',
+        default=0,
+    )
+
+    shipment_price = schema.Int(
+        title=u'Shipment cost',
+        default=0,
+    )
 

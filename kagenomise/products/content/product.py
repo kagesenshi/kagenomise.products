@@ -19,11 +19,12 @@ from z3c.relationfield.schema import RelationList, RelationChoice
 from plone.formwidget.contenttree import ObjPathSourceBinder
 
 from kagenomise.products import MessageFactory as _
+from kagenomise.products.interfaces import IBaseProduct
 
 
 # Interface class; used to define content-type schema.
 
-class IProduct(form.Schema, IImageScaleTraversable):
+class IProduct(form.Schema, IImageScaleTraversable, IBaseProduct):
     """
     Description of the Example Type
     """
