@@ -12,8 +12,8 @@
   <property name="global_allow">True</property>
   <property name="filter_content_types">True</property>  
   <property name="allowed_content_types">
-      <element name="Image"/>
-      <element name="kagenomise.product.productvariation"/>
+      <element value="Image"/>
+      <element value="kagenomise.products.productvariation"/>
   </property>
   <property name="allow_discussion">True</property>
 
@@ -27,6 +27,7 @@
      <element value="plone.multilingualbehavior.interfaces.IDexterityTranslatable"/>
      <element value="plone.app.referenceablebehavior.referenceable.IReferenceable"/>
      <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer"/>
+     <element value="collective.miscbehaviors.behavior.bodytext.IBodyText"/>
    </property>
 
   <!-- View information -->

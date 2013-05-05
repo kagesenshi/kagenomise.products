@@ -34,6 +34,7 @@ setup(name='kagenomise.products',
           'plone.app.multilingual',
           'plone.multilingualbehavior',
           'collective.js.simplecart',
+          'collective.miscbehaviors'
           # -*- Extra requirements: -*-
       ],
       extras_require={
