@@ -40,19 +40,3 @@ class IClothing(form.Schema, IImageScaleTraversable, IBaseProduct):
         description=u'Available sizes for clothing',
         value_type=schema.TextLine()
     )
-
-    currency = schema.Choice(
-        title=u'Currency',
-        vocabulary='kagenomise.products.currency'
-    )
-
-    price = schema.Int(
-        title=u'Price',
-        default=0,
-    )
-
-    shipment_price = schema.Int(
-        title=u'Shipment cost',
-        default=0,
-    )
-
