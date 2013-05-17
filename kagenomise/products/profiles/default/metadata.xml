@@ -4,5 +4,8 @@
     <dependencies>
         <dependency>profile-plone.app.dexterity:default</dependency>
         <dependency>profile-collective.js.simplecart:default</dependency>
+        <dependency>profile-collective.js.galleriffic:default</dependency>
+        <dependency>profile-collective.jqhistory:default</dependency>
+
     </dependencies>
 </metadata>

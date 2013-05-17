@@ -9,9 +9,17 @@
 
 <metal:main fill-slot="content-core">
     <metal:content-core define-macro="content-core">
-        <div id="product-details">
-            <h3>Product Details</h3>
-            <div tal:content="structure context/text|nothing">
+        <div id="kagenomise-products-view">
+
+            <div class="product-actionbar">
+                
+            </div>
+            <div class="product-details">
+                <h2>Product Details</h2>
+                <div tal:content="structure context/text|nothing">
+                </div>
+            </div>
+
         </div>
   </metal:content-core>
 </metal:main>

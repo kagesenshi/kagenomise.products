@@ -1,0 +1,27 @@
+<div id="kagenomise-products-product_slider"
+    tal:define="images viewlet/images">
+    <div>
+        <div class="slider-state">
+            <div id="loading"></div>
+            <div id="slideshow"></div>
+            <div id="caption"
+                style='display:none'></div>
+            <div style='display:none'
+                id="controls"></div>
+        </div>
+        <div class="slider-data">
+            <div id="thumbs">
+                <ul class="thumbs noscript">
+                    <li tal:repeat="image images">
+                        <a class="thumb" name="optionalCustomIdentifier"
+                            tal:attributes="href image/slide_url">
+                            <img tal:attributes="src image/thumb_url"/>
+                        </a>
+                        <div class="caption"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class='visualClear'></div>
+    </div>
+</div>

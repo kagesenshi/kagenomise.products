@@ -1,0 +1,30 @@
+/* style.css */
+
+#kagenomise-products-product_slider a {
+    border-bottom:none !important;
+}
+
+#kagenomise-products-product_slider .slider-data {
+    float:left;
+}
+
+#kagenomise-products-product_slider .slider-state {
+    float:left;
+    padding:10px;
+    border: 1px #ccc solid;
+}
+
+#kagenomise-products-product_slider .thumbs {
+    list-style:none;
+}
+
+#kagenomise-products-product_slider .thumbs li {
+    float:left;
+    margin:10px;
+    border: 1px #ccc dashed;
+}
+
+#kagenomise-products-view .product-details {
+    border-top: 1px solid #ccc;
+    margin-top:20px;
+}
