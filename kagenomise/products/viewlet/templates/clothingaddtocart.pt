@@ -1,0 +1,33 @@
+<div id="kagenomise-products-addtocart">
+    <table class="listing">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Size</th>
+                <th>Quantity</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="simpleCart_shelfItem">
+                <td class="item_name" tal:content="context/Title"></td>
+                <td><span class='item_price'>MYR30.00</span></td>
+                <td>
+                    <select class="item_size">
+                        <option tal:repeat="size context/available_sizes"
+                            tal:attributes="value size"
+                            tal:content="size"></option>
+                    </select>
+                </td>
+                <td><input type="text" size="3"
+                        value="1" class="item_Quantity"/></td>
+                <td>
+                    <input type="hidden" class="item_path"
+                        tal:attributes="value view/item_path"/>
+                    <a class="item_add" href="javascript:;">Add to Cart</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
