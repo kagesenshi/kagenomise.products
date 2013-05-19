@@ -27,7 +27,7 @@
                         value="1" class="item_Quantity"/></td>
                 <td>
                     <input type="hidden" class="item_path"
-                        tal:attributes="value view/item_path"/>
+                        tal:attributes="value viewlet/item_path"/>
                     <div class="cartButton">
                         <a class="item_add" href="javascript:;">Add to Cart</a>
                     </div>

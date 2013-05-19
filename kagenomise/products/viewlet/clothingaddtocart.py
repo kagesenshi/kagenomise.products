@@ -18,3 +18,7 @@ class ClothingAddToCart(grok.Viewlet):
 
     def available(self):
         return True
+
+    def item_path(self):
+        return '/'.join(self.context.getPhysicalPath())
+
