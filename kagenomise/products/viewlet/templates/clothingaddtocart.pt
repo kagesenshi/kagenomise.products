@@ -1,4 +1,6 @@
-<div id="kagenomise-products-addtocart">
+<div id="kagenomise-products-addtocart" 
+    tal:define="here_url context/absolute_url;
+                resurl string:${context/portal_url}/++resource++kagenomise.products">
     <table class="listing">
         <thead>
             <tr>
@@ -6,6 +8,7 @@
                 <th>Price</th>
                 <th>Size</th>
                 <th>Quantity</th>
+                <th></th>
                 <th></th>
             </tr>
         </thead>
@@ -25,7 +28,23 @@
                 <td>
                     <input type="hidden" class="item_path"
                         tal:attributes="value view/item_path"/>
-                    <a class="item_add" href="javascript:;">Add to Cart</a>
+                    <div class="cartButton">
+                        <a class="item_add" href="javascript:;">Add to Cart</a>
+                    </div>
+                </td>
+                <td>
+                    <a class="kagenomise-products-socialshare"
+                        tal:attributes="href string:https://plus.google.com/share?url=${here_url}">
+                        <img tal:attributes="src string:${resurl}/gplus.png"/>
+                    </a>
+                    <a class="kagenomise-products-socialshare"
+                        tal:attributes="href string:http://www.facebook.com/sharer/sharer.php?u=${here_url}&t=${here_url}">
+                        <img tal:attributes="src string:${resurl}/facebook.png"/>
+                    </a>
+                    <a class="kagenomise-products-socialshare"
+                        tal:attributes="href string:http://twitter.com/intent/tweet?url=${here_url}">
+                        <img tal:attributes="src string:${resurl}/twitter.png"/>
+                    </a>
                 </td>
             </tr>
         </tbody>
