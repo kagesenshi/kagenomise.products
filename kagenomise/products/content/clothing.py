@@ -20,7 +20,7 @@ from plone.formwidget.contenttree import ObjPathSourceBinder
 
 from kagenomise.products import MessageFactory as _
 from kagenomise.products.interfaces import IBaseProduct
-from kagenomise.orders.interfaces import IOrderTitle
+from kagenomise.cart.interfaces import IItemTitle
 
 # Interface class; used to define content-type schema.
 
@@ -46,7 +46,7 @@ class IClothing(form.Schema, IImageScaleTraversable, IBaseProduct):
 
 class ClothingTitle(grok.Adapter):
     grok.context(IClothing)
-    grok.implements(IOrderTitle)
+    grok.implements(IItemTitle)
     
     def __init__(self, context):
         self.context = context
