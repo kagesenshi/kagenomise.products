@@ -20,7 +20,7 @@ from plone.formwidget.contenttree import ObjPathSourceBinder
 
 from kagenomise.products import MessageFactory as _
 from kagenomise.products.interfaces import IBaseProduct
-
+from kagenomise.orders.interfaces import IOrderTitle
 
 # Interface class; used to define content-type schema.
 
@@ -38,5 +38,19 @@ class IClothing(form.Schema, IImageScaleTraversable, IBaseProduct):
     available_sizes = schema.List(
         title=u'Available Sizes',
         description=u'Available sizes for clothing',
-        value_type=schema.TextLine()
+        value_type=schema.Choice(
+            vocabulary='kagenomise.products.clothing_sizes'
+        )
     )
+
+
+class ClothingTitle(grok.Adapter):
+    grok.context(IClothing)
+    grok.implements(IOrderTitle)
+    
+    def __init__(self, context):
+        self.context = context
+
+    def getTitle(self, data):
+        return '%s (%s)' % (self.context.Title(), data['size'])
+

@@ -1,7 +1,9 @@
 /* script.js */
 
 jQuery(document).ready(function($) {
-    var gallery = $('#kagenomise-products-product_slider').galleriffic({
+
+    $('#kagenomise-products-product_slider').each(function (idx, node) {
+    var gallery = $(node).galleriffic({
         delay:                     3000, // in milliseconds
         numThumbs:                 20, // The number of thumbnails to show page
         preloadAhead:              40, // Set to -1 to preload all images
@@ -32,6 +34,7 @@ jQuery(document).ready(function($) {
         onPageTransitionIn:        undefined, // accepts a delegate like such: function() { ... }
         onImageAdded:              undefined, // accepts a delegate like such: function(imageData, $li) { ... }
         onImageRemoved:            undefined  // accepts a delegate like such: function(imageData, $li) { ... }
+    });
     });
 
 });

@@ -10,16 +10,28 @@
 <metal:main fill-slot="content-core">
     <metal:content-core define-macro="content-core">
         <div id="kagenomise-products-view">
-
-            <div class="product-actionbar">
-                
-            </div>
             <div class="product-details">
                 <h2>Product Details</h2>
                 <div tal:content="structure context/text|nothing">
                 </div>
             </div>
 
+            <div class="product-order">
+                <div class="simpleCart_shelfItem">
+                    <input type="text" class="hiddenStructure item_name" 
+                        tal:attributes="value context/Title"/>
+                    <input type="text" class="hiddenStructure item_path"
+                        tal:attributes="value view/item_path"/>
+                    <select class="item_size" type="text">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                    </select>
+                    Quantity: <input type="text" value="1" class="item_Quantity"/><br/>
+                    Price: <span class='item_price'>MYR30.00</span>
+                    <a class="item_add" href="javascript:;">Add to Cart</a>
+                </div>
+            </div>
         </div>
   </metal:content-core>
 </metal:main>

@@ -10,3 +10,5 @@ class Index(dexterity.DisplayForm):
     grok.template('clothing_view')
     grok.name('view')
 
+    def item_path(self):
+        return '/'.join(self.context.getPhysicalPath())

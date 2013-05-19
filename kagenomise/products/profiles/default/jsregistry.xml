@@ -3,7 +3,8 @@
 
     <!-- -*- extra stuff goes here -*- -->
 
- <javascript id="++resource++kagenomise.products/script.js" 
+    <javascript id="++resource++kagenomise.products/script.js" 
+        insert-after="++resource++kagenomise.ordermanagement/script.js"
         cacheable="True"
         enabled="True"
         cookable="True"
